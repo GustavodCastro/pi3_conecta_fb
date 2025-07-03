@@ -31,12 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'accounts',
+    'internships',
+    'events',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +125,17 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Conecta IFB",
+    "site_header": "Conecta IFB Admin",
+    "site_brand": "Conecta IFB",
+    "welcome_sign": "Bem-vindo à administração do Conecta IFB",
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "icons": {
+        "accounts.User": "fas fa-user",
+        "events.Event": "fas fa-calendar-alt",
+    },
+}
